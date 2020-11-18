@@ -1,0 +1,148 @@
+@import "../../index";
+
+.myModal {
+  bottom: 0;
+  right: 0;
+  background: $midDarkGreenColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  //overflow: auto;
+  padding: 1.5rem;
+
+  .cart__list{
+    height: 450px;
+    overflow-y: auto;
+  }
+
+  .cart__checkout{
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+  }
+  .cart__total__detail{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .cart__button{
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px solid $darkGreenColor;
+    margin-bottom: 1rem;
+  }
+  @include breakpoint(desktop-up) {
+    padding: 5rem;
+  }
+}
+.button__green{
+  background-color: $darkGreenColor;
+  color: $whiteColor;
+}
+
+.myModal.hide {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  animation: fadeOut 0.2s ease-in both;
+  -webkit-animation: fadeOut 0.2s ease-in both;
+}
+
+.myModal.show {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  animation: fadeIn 0.5s ease-in both;
+  -webkit-animation: fadeIn 0.5s ease-in both;
+}
+
+.modalBlock {
+  display: flex;
+  background-color: transparent;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  animation: moveUp 1s ease-in-out both;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  &-content {
+    //width: 100%;
+    padding: 3rem 1rem;
+    max-width: 570px;
+    background: $lightGreenColor;
+    display: flex;
+    height: 100%;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 14px 0 rgba(60, 66, 87, 0.12);
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14.3809px;
+      line-height: 22px;
+    }
+  }
+}
+.input-label {
+  color: $grayColor;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: rem-calc(18);
+}
+.cart__container{
+  position: relative;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+.modalWrapper {
+  width: 100%;
+  max-width: 570px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+
+  .closeModal {
+    right: 5%;
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    display: flex;
+    position: absolute;
+    z-index: 4000;
+  }
+
+}
+.modalContainer {
+  background-color: $lightGreenColor;
+  border-radius: 10px;
+  padding: 1rem 0;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    background-color: $whiteColor;
+    width: 100%;
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+

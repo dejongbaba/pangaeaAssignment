@@ -1,0 +1,29 @@
+@import "../../index";
+.product{
+
+  &__item{
+    text-align: center;
+    padding: 2rem;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  &__item__wrapper{
+    min-height: 200px;
+    @include breakpoint(desktop-up){
+      min-height: 350px;
+    }
+  }
+  &__item__title,&__item__price{
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  &__item__button{
+    background-color: $darkGreenColor;
+    color: $whiteColor;
+    padding: 1rem;
+    border: 1px solid $darkGreenColor;
+    width: 150px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../index";
+
+%button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem-calc(16);
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 10px;
+  max-height: rem-calc(40);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: rem-calc(14);
+  border: 1px solid transparent;
+  &:hover,
+  &:active {
+    opacity: 0.8;
+    border: 1px solid #d8e3ff;
+  }
+}
+
+

@@ -1,0 +1,38 @@
+@import "../../index";
+
+
+.product{
+
+  &__header{
+    padding: 3rem;
+  }
+  &__description{
+    font-family: FF Bau Regular,sans-serif;
+  }
+  &__title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__grid{
+    background-color:$lightGreenColor ;
+    display: grid;
+    padding: .5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    min-height: 100vh;
+    @include breakpoint(tablet-portrait-up){
+      padding: 3rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    @include breakpoint(desktop-up){
+      padding: 3rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+
+}

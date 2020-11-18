@@ -1,0 +1,59 @@
+@import "../../index";
+.cart{
+
+  &__item{
+    padding: 2rem;
+    display: flex;
+    position: relative;
+    background-color: $whiteColor;
+    margin-bottom: 1rem;
+    .remove{
+      cursor: pointer;
+      position: absolute;
+      right: 5%;
+      font-size: 1.5rem;
+    }
+  }
+  &__bottom{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__currency{
+    background-color: $whiteColor;
+    width: 70px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border: none;
+  }
+  &__control{
+    display: flex;
+    border: 1px solid $lightGreenColor;
+    span{
+      flex-grow: 1;
+      padding: .5rem;
+    }
+    .minus,.plus{
+      cursor: pointer;
+    }
+  }
+  &__description{
+    flex-grow:1;
+    width: 70%;
+    position: relative;
+  }
+  &__image{
+    flex-grow:0;
+    width: 30%;
+  }
+  &__image{
+    height: 150px;
+    width: 200px;
+    img{
+      width: 100%;
+    }
+  }
+}
